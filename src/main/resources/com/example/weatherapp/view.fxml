@@ -3,22 +3,25 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.Controller">
    <children>
+      <Button fx:id="searchButton" layoutX="325.0" layoutY="100.0" mnemonicParsing="false" onAction="#getWeather" text="Search" />
       <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="261.0" layoutY="22.0" prefHeight="20.0" prefWidth="179.0" text="Welcome to WeatherApp!">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="textField" layoutX="237.0" layoutY="68.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter a city to get current weather info" text="Enter a city to get current weather info" />
-      <Button fx:id="searchButton" layoutX="325.0" layoutY="100.0" mnemonicParsing="false" onAction="#getWeather" text="Search" />
-      <Label fx:id="temperature" layoutX="42.0" layoutY="153.0" text="Label" />
-      <Label fx:id="pressure" layoutX="42.0" layoutY="216.0" text="Label" />
-      <Label fx:id="humidity" layoutX="42.0" layoutY="278.0" text="Label" />
-      <Label fx:id="windDirAndSpeed" layoutX="42.0" layoutY="339.0" text="Label" />
+      <TextField fx:id="txtField" layoutX="237.0" layoutY="68.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter a city to get current weather info" />
+      <Label fx:id="tempLabel" layoutX="43.0" layoutY="202.0" />
+      <Label fx:id="pressureLabel" layoutX="43.0" layoutY="228.0" />
+      <Label fx:id="humidityLabel" layoutX="43.0" layoutY="255.0" />
+      <Label fx:id="windDirLabel" layoutX="43.0" layoutY="281.0" />
+      <ImageView fx:id="imgV" fitHeight="114.0" fitWidth="145.0" layoutX="489.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="windSpeedLabel" layoutX="43.0" layoutY="309.0" />
+      <Label fx:id="descriptionLabel" layoutX="43.0" layoutY="176.0" />
    </children>
 </AnchorPane>
