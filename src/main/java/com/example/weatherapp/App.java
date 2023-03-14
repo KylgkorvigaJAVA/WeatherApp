@@ -11,7 +11,7 @@ public class App extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
-        stage.setTitle("WeatherApp!");
+        stage.setTitle("WeatherApp");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

@@ -31,6 +31,8 @@ public class Controller {
 
 
     @FXML
+    private ImageView bdImg;
+    @FXML
     private Label descriptionLabel;
 
     @FXML

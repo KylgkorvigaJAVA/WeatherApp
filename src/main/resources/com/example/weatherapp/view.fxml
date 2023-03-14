@@ -3,29 +3,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.Controller">
    <children>
+      <ImageView fx:id="bdImg" fitHeight="400.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/BackgroundImage.jpg" />
+         </image></ImageView>
       <Button fx:id="searchButton" layoutX="327.0" layoutY="103.0" mnemonicParsing="false" onAction="#getWeather" text="Search" />
-      <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="263.0" layoutY="25.0" prefHeight="20.0" prefWidth="179.0" text="Welcome to WeatherApp!">
+      <Label fx:id="welcomeLabel" alignment="CENTER" blendMode="ADD" layoutX="203.0" layoutY="3.0" prefHeight="66.0" prefWidth="299.0" text="WeatherApp">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="Trebuchet MS Bold" size="49.0" />
          </font>
       </Label>
       <TextField fx:id="txtField" layoutX="239.0" layoutY="71.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter a city to get current weather info" />
-      <Label fx:id="tempLabel" layoutX="304.0" layoutY="258.0">
+      <Label fx:id="tempLabel" layoutX="278.0" layoutY="307.0" prefHeight="30.0" prefWidth="179.0">
          <font>
             <Font name="System Bold" size="45.0" />
          </font></Label>
       <Label fx:id="pressureLabel" layoutX="144.0" layoutY="257.0" />
       <Label fx:id="humidityLabel" layoutX="144.0" layoutY="286.0" />
       <Label fx:id="windDirLabel" layoutX="144.0" layoutY="315.0" />
-      <ImageView fx:id="imgV" fitHeight="138.0" fitWidth="169.0" layoutX="501.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="windSpeedLabel" layoutX="144.0" layoutY="343.0" />
-      <Label fx:id="descriptionLabel" layoutX="303.0" layoutY="317.0" prefHeight="25.0" prefWidth="169.0">
+      <ImageView fx:id="imgV" fitHeight="138.0" fitWidth="169.0" layoutX="284.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="windSpeedLabel" layoutX="144.0" layoutY="343.0" prefHeight="17.0" prefWidth="51.0" />
+      <Label fx:id="descriptionLabel" layoutX="284.0" layoutY="271.0" prefHeight="25.0" prefWidth="169.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Label>
@@ -39,7 +44,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="48.0" layoutY="315.0" text="Wind directory:">
+      <Label layoutX="48.0" layoutY="315.0" text="Wind direction:">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
