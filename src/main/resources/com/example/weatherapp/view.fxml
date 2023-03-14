@@ -7,21 +7,47 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.Controller">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.Controller">
    <children>
-      <Button fx:id="searchButton" layoutX="325.0" layoutY="100.0" mnemonicParsing="false" onAction="#getWeather" text="Search" />
-      <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="261.0" layoutY="22.0" prefHeight="20.0" prefWidth="179.0" text="Welcome to WeatherApp!">
+      <Button fx:id="searchButton" layoutX="327.0" layoutY="103.0" mnemonicParsing="false" onAction="#getWeather" text="Search" />
+      <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="263.0" layoutY="25.0" prefHeight="20.0" prefWidth="179.0" text="Welcome to WeatherApp!">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtField" layoutX="237.0" layoutY="68.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter a city to get current weather info" />
-      <Label fx:id="tempLabel" layoutX="43.0" layoutY="202.0" />
-      <Label fx:id="pressureLabel" layoutX="43.0" layoutY="228.0" />
-      <Label fx:id="humidityLabel" layoutX="43.0" layoutY="255.0" />
-      <Label fx:id="windDirLabel" layoutX="43.0" layoutY="281.0" />
-      <ImageView fx:id="imgV" fitHeight="114.0" fitWidth="145.0" layoutX="489.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="windSpeedLabel" layoutX="43.0" layoutY="309.0" />
-      <Label fx:id="descriptionLabel" layoutX="43.0" layoutY="176.0" />
+      <TextField fx:id="txtField" layoutX="239.0" layoutY="71.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter a city to get current weather info" />
+      <Label fx:id="tempLabel" layoutX="304.0" layoutY="258.0">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font></Label>
+      <Label fx:id="pressureLabel" layoutX="144.0" layoutY="257.0" />
+      <Label fx:id="humidityLabel" layoutX="144.0" layoutY="286.0" />
+      <Label fx:id="windDirLabel" layoutX="144.0" layoutY="315.0" />
+      <ImageView fx:id="imgV" fitHeight="138.0" fitWidth="169.0" layoutX="501.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="windSpeedLabel" layoutX="144.0" layoutY="343.0" />
+      <Label fx:id="descriptionLabel" layoutX="303.0" layoutY="317.0" prefHeight="25.0" prefWidth="169.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="84.0" layoutY="257.0" text="Pressure:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="286.0" text="Humidity:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="315.0" text="Wind directory:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="343.0" text="Wind speed:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

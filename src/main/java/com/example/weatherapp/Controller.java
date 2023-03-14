@@ -21,13 +21,13 @@ import java.net.URL;
 
 public class Controller {
 
-    String icon, windDir, description;
+    String icon, description;
 
     Image img;
 
     Double temp, windSpd;
 
-    Long hum, hPa;
+    Long hum, windDir, hPa;
 
 
     @FXML
@@ -103,6 +103,7 @@ public class Controller {
             JSONParser parse = new JSONParser();
             JSONObject data_obj = (JSONObject) parse.parse(strBuilder.toString());
             JSONObject main_obj = (JSONObject) data_obj.get("main");
+            JSONObject wind_obj = (JSONObject) data_obj.get("wind");
 
             temp = (double) main_obj.get("temp");
             System.out.println(temp);
@@ -110,10 +111,13 @@ public class Controller {
             hPa = (long) main_obj.get("pressure");
             System.out.println(hPa);
 
-            windDir = (String) main_obj.get("wind_dir");
+//            JSONArray arr = (JSONArray) data_obj.get("wind");
+//            JSONObject wind_obj = (JSONObject) arr.get(0);
+
+            windDir = (long) wind_obj.get("deg");
             System.out.println(windDir);
 
-            windSpd = (double) main_obj.get("wind_speed");
+            windSpd = (double) wind_obj.get("speed");
             System.out.println(windSpd);
 
             hum = (long) main_obj.get("humidity");
@@ -146,16 +150,30 @@ public class Controller {
 
         descriptionLabel.setText(description);
         imgV.setImage(img);
-        windDirLabel.setText("Wind directory" + windDir);
+        windDirLabel.setText(windDir + "°");
 
-        String windSpdTemp = "Wind speed: " + windSpd + "m/s";
+        String windSpdTemp = windSpd + "m/s";
         windSpeedLabel.setText(windSpdTemp);
 
-        String tempPressure = "Pressure: " + hPa + "hPa";
+        String tempPressure = hPa + "hPa";
         pressureLabel.setText(tempPressure);
 
-        String tempHum = "Humidity: " + hum + "%";
+        String tempHum = hum + "%";
         humidityLabel.setText(tempHum);
+
+
+//        descriptionLabel.setText(description);
+//        imgV.setImage(img);
+//        windDirLabel.setText("Wind directory: " + windDir + "°");
+//
+//        String windSpdTemp = "Wind speed: " + windSpd + "m/s";
+//        windSpeedLabel.setText(windSpdTemp);
+//
+//        String tempPressure = "Pressure: " + hPa + "hPa";
+//        pressureLabel.setText(tempPressure);
+//
+//        String tempHum = "Humidity: " + hum + "%";
+//        humidityLabel.setText(tempHum);
 
 
 
