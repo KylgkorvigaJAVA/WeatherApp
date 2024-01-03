@@ -12,6 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -164,18 +165,7 @@ public class Controller {
         humidityLabel.setText(tempHum);
 
 
-//        descriptionLabel.setText(description);
-//        imgV.setImage(img);
-//        windDirLabel.setText("Wind directory: " + windDir + "°");
-//
-//        String windSpdTemp = "Wind speed: " + windSpd + "m/s";
-//        windSpeedLabel.setText(windSpdTemp);
-//
-//        String tempPressure = "Pressure: " + hPa + "hPa";
-//        pressureLabel.setText(tempPressure);
-//
-//        String tempHum = "Humidity: " + hum + "%";
-//        humidityLabel.setText(tempHum);
+
 
 
 

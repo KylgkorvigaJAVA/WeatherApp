@@ -4,6 +4,7 @@ module com.example.weatherapp {
     requires json.simple;
 
 
+
     opens com.example.weatherapp to javafx.fxml;
     exports com.example.weatherapp;
 }
